@@ -19,7 +19,7 @@ import java.util.Map;
 public class ProductController {
 
     @Autowired
-    IProductService iProductService;
+    private IProductService iProductService;
 
     @GetMapping("findSwiper")
     public R findSwiper() {
@@ -27,6 +27,16 @@ public class ProductController {
         Map<String,Object> map = new HashMap<>();
         map.put("message", list);
         return R.ok(map);
+    }
+
+
+    @GetMapping("findHot")
+    public R findHot() {
+        List<Product> list = iProductService.findHot(iProductService);
+        Map<String,Object> map = new HashMap<>();
+        map.put("hotProductList", list);
+        return R.ok(map);
+
     }
 
 

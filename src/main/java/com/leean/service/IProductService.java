@@ -9,4 +9,5 @@ import java.util.List;
 public interface IProductService extends IService<Product> {
 
     List<Product> findSwiper(IProductService iProductService);
+    List<Product> findHot(IProductService iProductService);
 }
