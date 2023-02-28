@@ -38,6 +38,17 @@ public class ProductController {
         return R.ok(map);
 
     }
+    /**
+     * 查找商品详情
+     * **/
+    @GetMapping("findDetail")
+    public R findDetail(Integer id) {
+        Product product = iProductService.findDetail(iProductService, id);
+        Map<String,Object> map = new HashMap<>();
+        map.put("hotProductList", product);
+        return R.ok(map);
+
+    }
 
 
 }

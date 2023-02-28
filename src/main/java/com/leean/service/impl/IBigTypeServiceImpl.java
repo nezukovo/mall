@@ -54,17 +54,5 @@ public class IBigTypeServiceImpl extends ServiceImpl<BigTypeMapper, BigType> imp
     }
 
 
-    /**
-     *
-     *  List<BigType> bigTypeList = bigTypeService.list();
-*         for(BigType bigType:bigTypeList){
-*             List<SmallType> smallTypeList = smallTypeService.list(new QueryWrapper<SmallType>().eq("bigTypeId", bigType.getId()));
-*             bigType.setSmallTypeList(smallTypeList);
-*             for(SmallType smallType:smallTypeList){
-*                 List<Product> productList = productService.list(new QueryWrapper<Product>().eq("typeId", smallType.getId()));
-*                 smallType.setProductList(productList);
-*             }
-*         }
-     *
-     * */
+
 }
