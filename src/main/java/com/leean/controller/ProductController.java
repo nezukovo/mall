@@ -45,7 +45,7 @@ public class ProductController {
     public R findDetail(Integer id) {
         Product product = iProductService.findDetail(iProductService, id);
         Map<String,Object> map = new HashMap<>();
-        map.put("hotProductList", product);
+        map.put("product", product);
         return R.ok(map);
 
     }
